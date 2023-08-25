@@ -1,18 +1,25 @@
 What is this game about (overview/description)
 ---------------------------------------------
-Description: 
+
+# Description:
+
 This is a text adventure game where it creates a 3 x 3 gameboard room.
 You need to figure out a way to find the one murderer with your brilliant brains. 
 There are five characters as they are Anan, Jeff, Matt, Eric and Adam. Use your intelligence 
-to investigate the weapons!! Rumor: Anan has been murdered.\nRumor: Jeff suspects that Matt strangles Anan with the rope in study room
+to investigate the weapons!! Rumor: Anan has been murdered. 
 
-Overview:
+Rumor: Jeff suspects that Matt strangles Anan with the rope in study room
+
+# Overview:
+
 I implemented a 2D array with mallloc, making each room a pointer. Each room is a pointer and it
 contains pointers pointing at rooms from North, South, East, West, name of NPC, also
 a LinkedList that stores all item in that room. There are 4 x 9 = 36 pointers in total for rooms. 
 The Linkedlist is implemented by pointers as well, the next item of the list is another pointer of an item.
 Each room only contain at most one item at the beginning. I also have struct Avatar where I store the information of the avatar, such as
-where the avatar is located at, and the inventory. After finishing the program, I deallocate the memory of the board, the avatar's current room,
+where the avatar is located at, and the inventory. 
+
+After finishing the program, I deallocate the memory of the board, the avatar's current room,
 its inventory, its name. I have also deallocated the memory of the node if that is being removed from a linkedlist.
 Note: I have many edge cases to prevent the user to input invalid inputs. 
 
@@ -41,8 +48,10 @@ Implementation my code satisfies each of the requirements of the project
 
 How to complie this program
 ---------------------------------------------
-First: use gcc adventure.c room.c -o myProgram
-Second: use ./myProgram
+```c
+gcc adventure.c room.c -o myProgram
+./myProgram
+```
 
 
 How to manage user input 
