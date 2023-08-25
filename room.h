@@ -7,14 +7,15 @@
 #define MAX_CHARACTER 6 // the maximum number of characters that can be in the room is 6
 
 //  Struct representing a room board
-struct Room{
-    char * name; // the name of the room such as "kitchen", "bathroom"
+struct Room
+{
+    char *name; // the name of the room such as "kitchen", "bathroom"
     struct Room *North;
     struct Room *South;
     struct Room *East;
     struct Room *West;
     struct item *itemlist;          // LinkedList structure
-    char *character[MAX_CHARACTER]; // the name of all the players in this room // NULL for character do not exist 
+    char *character[MAX_CHARACTER]; // the name of all the players in this room // NULL for character do not exist
 };
 
 // Create a 3x3 room via pointers with 2D malloc
@@ -58,20 +59,20 @@ void print_room(struct Room **board);
 void print_items(struct Room **board);
 
 // show the Message that each time the user enters the room
-//paramter: the current room the avatar is at
+// paramter: the current room the avatar is at
 void showMessage(struct Room *current_room);
 
-// print out the room name given by one room 
+// print out the room name given by one room
 // parameter: a pointer of only one room
-char* print_single_room(struct Room *r,char* direction);
+char *print_single_room(struct Room *r, char *direction);
 
 // check the name if it is empty
 // parameter: the room that is either at North, East, West, South of the current room, but not the current room
 // return: room exist returns 1, otherwise return 0
 int checkRoomExist(struct Room *r);
 
-// check if the direction is valid 
+// check if the direction is valid
 // paramter: the string of the room name
 // return 1 if the direction is valid, otherwise is 0
-int checkDirectionValid(char* direction);
+int checkDirectionValid(char *direction);
 #endif

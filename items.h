@@ -4,7 +4,8 @@
 #define ITEMS_H
 
 // a Struct representing a LinkedList of items
-struct item{
+struct item
+{
     char *item_name;        // each item has its own name
     struct item *next_item; // the memory adderss of next item
 };
@@ -28,18 +29,18 @@ void printList(struct item head);
 // return: room exist returns 1, otherwise return 0
 int checkRoomExist(struct Room *r);
 
-// check the item room if it valids 
-// parameter: a string of the item 
-// return: item name exist returns 1, otherwise return 0 
-int checkItemNameValid(char * name, struct item *list_item);
+// check the item room if it valids
+// parameter: a string of the item
+// return: item name exist returns 1, otherwise return 0
+int checkItemNameValid(char *name, struct item *list_item);
 
 // check the charcater name if it valids
 // parameter: a string of character name
-// return: character name exist returns 1, otherwise return 0 
-int checkCharacterNameValid(char * name, char * character_list[]);
+// return: character name exist returns 1, otherwise return 0
+int checkCharacterNameValid(char *name, char *character_list[]);
 
-// check the itemlist if it exists 
-// parameter: a pointer of itemlist 
+// check the itemlist if it exists
+// parameter: a pointer of itemlist
 // return: itemlist exist returns 1, otherwise returns 0
 int checkItemlistValid(struct item *itemlist);
 
